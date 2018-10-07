@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Audio Visualizer</title>
+        <script src="scripts/audioscript.js"></script>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    </head>
+    <body>
+        <div id="main">
+            <div id="header">
+                <i class="fas fa-window-restore"></i> Joe's Audio Visualizer
+                <div id="smoothing">
+                        <i class="fas fa-balance-scale"></i> Smoothing: 
+                        <input type="range" min="1" max="100" value="50" class="slider" id="smoothing_slider">
+                </div>
+            </div>
+            <div id="sidebar" class="_audio sidebar">
+                <div id="track_wrapper">
+                    <select id="track_selector">
+                        <option value="media/Hello Goodbye.mp3" selected="selected">Hello Goodbye</option>
+                        <option value="media/Behoimi.mp3" selected="selected">Behoimi</option>
+                        <option value="media/Bomb Sniffing Pomeranian.mp3">Bomb Sniffing Pomeranian</option>
+                        <option value="media/Aeronaut.mp3">Aeronaut</option>
+                        <option value="media/Hells Entrance World.mp3">Hell's Entrance World</option>
+                    </select>
+                </div>
+                <h1>Spiral</h1>
+                <div id="slider_wrapper">
+                    <br>
+                    <input type="checkbox" id="checkbox1" class="checkbox" value="unknown"> Draw Spiral
+                    <br>
+                    <i class="fas fa-layer-group"></i> Outside Rotation
+                    <input type="range" min="1" max="100" value="30" class="slider" id="o_rotation_slider">
+                    <i class="fas fa-layer-group"></i> Inside Rotation
+                    <input type="range" min="1" max="35" value="4" class="slider" id="i_rotation_slider">
+                    <i class="fas fa-arrows-alt-h"></i> Zoom
+                    <input type="range" min="0" max="20" value="10" class="slider" id="zoom_slider">
+                    <i class="fas fa-sync-alt"></i> Spin Speed
+                    <input type="range" min="25" max="450" value="300" class="slider" id="speed_slider">
+                    <i class="far fa-square"></i> Node Size
+                    <input type="range" min="1" max="10" value="4" class="slider" id="node_size_slider">
+                    <i class="fas fa-tint"></i> Blur
+                    <input type="range" min="1" max="100" value="4" class="slider" id="blur_slider">
+                    <ul id="spiral_checklist">
+                        <li>
+                            <br>
+                            <input type="checkbox" id="dance_checkbox" class="checkbox" value="unknown"> Dance
+                        </li>
+                        <li>
+                            <br>
+                            <input type="checkbox" id="pulsate_checkbox" class="checkbox" value="unknown"> Pulsate
+                        </li>
+                        <li>
+                            <br>
+                            <input type="checkbox" id="grayscale_checkbox" class="checkbox" value="unknown"> Grayscale
+                        </li>
+                        <li>
+                            <br>
+                            <input type="checkbox" id="ultrabright_checkbox" class="checkbox" value="unknown"> Ultrabright
+                        </li>
+                    </ul>
+                </div>
+                <h1>Audio FX</h1>
+                <div id="audio_fx_wrapper">
+                    <i class="fas fa-layer-group"></i> Delay Time
+                    <input type="range" min="1" max="100" value="1" class="slider" id="delay_slider">
+                </div>
+                <h1>Other</h1>
+                <div id="checkbox_wrapper">
+                    <br>
+                    <input type="checkbox" id="checkbox2" class="checkbox" value="unknown"> Draw Wave Graph
+                </div>
+            </div>
+            <div id="canvas_wrapper" class="_audio visual">
+                <canvas id="canvas" width="600" height="500">
+                    Your browser does not support HTML5 canvas. Update your browser!
+                </canvas>
+            </div>
+        </div>
+        <footer>
+            <audio controls loop id="track"></audio>
+        </footer>
+    </body>
+</html>
