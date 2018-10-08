@@ -8,5 +8,4 @@ Draws random shapes and patterns to the screen, fit to the browser's window. Mad
 A small audio visualizer application written in javascript with the web audio API. Comes with basic visual and audio effects.
 
 ### Rotation Animation
-http://htmlpreview.github.io/?https://github.com/brainfoam/JS_Snippets/blob/master/Rotation_Animation/index.html
 An animation of circles moving about the center of the canvas. Made in HTML5 canvas/JS.
