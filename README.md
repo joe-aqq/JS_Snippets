@@ -10,3 +10,6 @@ A small audio visualizer application written in javascript with the web audio AP
 
 ### Rotation Animation
 An animation of circles moving about the center of the canvas. Made in HTML5 canvas/JS.
+
+### Star Service
+A small game I made for class for browsers. Fill out requests from aliens, using an infinite supply of repair items.
